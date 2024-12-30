@@ -35,13 +35,11 @@ def generate_gamma_data(n_samples=1000):
     y = y.unsqueeze(1)
     return x, y
 
-def generate_circular_data(n_samples=100):
-    x = torch.rand(n_samples, 1) * 10 - 5  # Input feature
-    # The angle depends on the input with some added circular noise
-    true_angle = torch.sin(x) * torch.pi  # True underlying angle
-    noise = torch.randn(n_samples, 1) * 0.5
-    y = (true_angle + noise) % (2 * torch.pi) - torch.pi # Keep angles in [-pi, pi]
-    return x, y
+def generate_circular_data():
+    # Example: Generate data in the range [-pi, pi]
+    x_data = torch.linspace(-torch.pi, torch.pi, 100).unsqueeze(1)
+    y_data = torch.sin(x_data)
+    return x_data, y_data
 
 def generate_bounded_data(n_samples=100):
     x = torch.randn(n_samples, 1) * 5
