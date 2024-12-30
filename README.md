@@ -1,4 +1,4 @@
-# Probabilistic Neural Networks with Different Posterior Distributions
+# Probabilistic Neural Networks for Different Posterior Distributions
 
 This project implements neural networks that outputs parameters for different probability distributions, enabling probabilistic regression for various types of data. I read this great [blog](https://hr0nix.github.io/ml-notes/dangers-of-l2-loss.html) on how, for scalar outcomes, the model should be based on the posterior distribution. This is a quick proof-of-concept on my learnings from the article.
 
